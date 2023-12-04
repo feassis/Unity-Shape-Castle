@@ -20,6 +20,11 @@ public class GridObject
 
     public void SetTile(Tile desiredTile)
     {
+        if (tile != null)
+        {
+            GameObject.Destroy(tile.gameObject);
+        }
+
         tile = GameObject.Instantiate(desiredTile);
         tile.transform.position = gridSystem.GetWorldPosition(gridPosition);
     }

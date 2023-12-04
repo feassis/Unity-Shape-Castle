@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  modfierHolder: {fileID: 0}
+  modfierHolder: {fileID: 7844811828244475266}
   tileSpreadSeeds:
   - weight: 0
     terrainType: 1
@@ -595,6 +595,9 @@ MonoBehaviour:
     terrainType: 6
   - weight: 30
     terrainType: 3
+  modifiersProbabilities:
+  - weight: 1
+    modifier: 0
 --- !u!1 &596464377744514535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3208,7 @@ Transform:
   - {fileID: 7535631014888958660}
   - {fileID: 4653130941890790814}
   - {fileID: 8584682442506995704}
+  - {fileID: 7844811828244475266}
   m_Father: {fileID: 279518857543626711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5985435091175635941
@@ -3731,6 +3735,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &7341494891646010604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7844811828244475266}
+  m_Layer: 0
+  m_Name: Modifier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7844811828244475266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341494891646010604}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890762499020943337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7359598553422233766
 GameObject:
   m_ObjectHideFlags: 0

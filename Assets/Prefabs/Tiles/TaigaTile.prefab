@@ -111,6 +111,9 @@ MonoBehaviour:
     terrainType: 6
   - weight: 0
     terrainType: 3
+  modifiersProbabilities:
+  - weight: 1
+    modifier: 0
 --- !u!1 &5864505770508056237
 GameObject:
   m_ObjectHideFlags: 0

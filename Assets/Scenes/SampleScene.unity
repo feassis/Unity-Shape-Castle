@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 1018020121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.8117094, y: -0.6079226, z: -1.2072296}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -521,8 +521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d4f00ad464bb640996a7da18e4bdee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: {fileID: 924002814579384169, guid: 16370a4fe3fda3e41b3d92c092e7873d,
-    type: 3}
   tiles:
   - Type: 1
     Tile: {fileID: 4815624195733684615, guid: 86e065bb2df5a1641b1b1c861755ac0b, type: 3}
@@ -538,6 +536,90 @@ MonoBehaviour:
     Tile: {fileID: 8820889843523190040, guid: 9da18eb4e326ada42b80869086f4486f, type: 3}
   - Type: 7
     Tile: {fileID: 924002814579384169, guid: 16370a4fe3fda3e41b3d92c092e7873d, type: 3}
+  biomes:
+  - terrain: 7
+    min: 1
+    max: 1
+    priority: 10
+  - terrain: 2
+    min: 2
+    max: 5
+    priority: 8
+  - terrain: 3
+    min: 1
+    max: 4
+    priority: 6
+  - terrain: 5
+    min: 10
+    max: 20
+    priority: 9
+  - terrain: 1
+    min: 3
+    max: 10
+    priority: 7
+--- !u!1 &1672491511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672491513}
+  - component: {fileID: 1672491512}
+  m_Layer: 0
+  m_Name: Terraing Service
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1672491512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672491511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef35d76f72872be4ea30aa15cd427c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainModifierConfig: {fileID: 11400000, guid: 4bf13706c9f9f4441983216a53cfe1d7,
+    type: 2}
+  biomeNodeOptions:
+  - Terrain: 7
+    BiomeNodeConfigs:
+    - {fileID: 11400000, guid: 773007c22c1e3bb4ca5628d70ea0ecbc, type: 2}
+  - Terrain: 5
+    BiomeNodeConfigs:
+    - {fileID: 11400000, guid: 0487d38fdf1460b41897abfc73eff601, type: 2}
+    - {fileID: 11400000, guid: 7d009f4a3d571d04aa943461de4ceb58, type: 2}
+  - Terrain: 3
+    BiomeNodeConfigs:
+    - {fileID: 11400000, guid: d21c9c349f7589a44a3d3cf1a082ca8c, type: 2}
+  - Terrain: 2
+    BiomeNodeConfigs:
+    - {fileID: 11400000, guid: 10bb258b78ce63b42880b0bafc6f59e3, type: 2}
+  - Terrain: 1
+    BiomeNodeConfigs:
+    - {fileID: 11400000, guid: eb41d212ff444414b93a84f72a6d156d, type: 2}
+--- !u!4 &1672491513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672491511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1834428704
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,3 +661,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1834428705}
   - {fileID: 1018020122}
+  - {fileID: 1672491513}

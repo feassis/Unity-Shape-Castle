@@ -16,13 +16,14 @@ public class TerrainService : MonoBehaviour
         public Terrain Terrain;
         public List<BiomeNodeConfig> BiomeNodeConfigs;
 
-        public List<BiomeConfig> GetBiome(int zCollun)
+        public (List<BiomeConfig> biome, float size) GetBiome(int zCollun)
         {
-            return BiomeNodeConfigs[UnityEngine.Random.Range(0, BiomeNodeConfigs.Count)].GetBiomeConfig(zCollun);
+            int sorted = UnityEngine.Random.Range(0, BiomeNodeConfigs.Count);
+            return (BiomeNodeConfigs[sorted].GetBiomeConfig(zCollun), BiomeNodeConfigs[sorted].GetMinDistance());
         } 
     }
 
-    public List<BiomeConfig> GetBiome(Terrain terrain, int zCollun)
+    public (List<BiomeConfig> biome, float size) GetBiome(Terrain terrain, int zCollun)
     {
         return biomeNodeOptions.Find(b => b.Terrain == terrain).GetBiome(zCollun);
     }

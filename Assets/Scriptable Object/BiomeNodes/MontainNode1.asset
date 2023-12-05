@@ -62,3 +62,4 @@ MonoBehaviour:
     IncrementalPos: {x: 3, y: -1}
   - Terrain: 2
     IncrementalPos: {x: 2, y: -2}
+  minDistanceFromOtherBiome: 2

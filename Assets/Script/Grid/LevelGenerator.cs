@@ -38,24 +38,60 @@ public class LevelGenerator : MonoBehaviour
         List<GridPosition> visitedNodes = new List<GridPosition>();
         List<GridPosition> nodesToVisit = new List<GridPosition>();
 
-        foreach (var biome in biomesToSetup)
+        List<Vector2Int> sortedBiomePos = new List<Vector2Int>();
+
+        foreach (BiomesSetup biome in biomesToSetup)
         {
             int amount = biome.BiomeAmount();
 
-            Vector2Int pos = Vector2Int.zero;
-            if (biome.terrain == Terrain.Spawn)
-            {
-                pos = new Vector2Int(gridSystem.GetGridSize().width / 2, gridSystem.GetGridSize().height / 2);
-            }
-            else
-            {
-                pos = new Vector2Int(Random.Range(0, gridSystem.GetGridSize().width), Random.Range(0, gridSystem.GetGridSize().height));
-            }
+            
 
             for (int i = 0; i < amount; i++)
             {
+                (List<BiomeConfig> biomeConfig, float size) sortedBiome = (new List<BiomeConfig>(), 0); 
 
-                List<BiomeConfig> biomeConfig = TerrainService.Instance.GetBiome(biome.terrain, pos.y);
+                Vector2Int pos = Vector2Int.zero;
+                if (biome.terrain == Terrain.Spawn)
+                {
+                    pos = new Vector2Int(gridSystem.GetGridSize().width / 2, gridSystem.GetGridSize().height / 2);
+                    sortedBiome = TerrainService.Instance.GetBiome(biome.terrain, pos.y);
+                }
+                else
+                {
+                    pos = new Vector2Int(Random.Range(0, gridSystem.GetGridSize().width), Random.Range(0, gridSystem.GetGridSize().height));
+                    int count = 0;
+                    bool validPosition = false;
+
+                    
+
+                    while (!validPosition && count < 3)
+                    {
+                        sortedBiome = TerrainService.Instance.GetBiome(biome.terrain, pos.y);
+                        if (sortedBiomePos.Count <= 0)
+                        {
+                            validPosition = true;
+                            continue;
+                        }
+
+                        foreach (var position in sortedBiomePos)
+                        {
+                            if (Vector2Int.Distance(pos, position) < sortedBiome.size)
+                            {
+                                pos = new Vector2Int(Random.Range(0, gridSystem.GetGridSize().width), Random.Range(0, gridSystem.GetGridSize().height));
+                                count++;
+                                continue;
+                            }
+                        }
+                        validPosition = true; 
+                        break;
+                    }
+
+                }
+
+                sortedBiomePos.Add(pos);
+
+                var biomeConfig = sortedBiome.biomeConfig;
+                
 
                 foreach (var item in biomeConfig)
                 {

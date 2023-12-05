@@ -9,6 +9,9 @@ public class BiomeNodeConfig : ScriptableObject
 {
     [SerializeField] private List<BiomeConfig> biomeConfigEven = new List<BiomeConfig>();
     [SerializeField] private List<BiomeConfig> biomeConfigOdd = new List<BiomeConfig>();
+    [SerializeField] private float minDistanceFromOtherBiome;
+
+    public float GetMinDistance() => minDistanceFromOtherBiome;
 
     public List<BiomeConfig> GetBiomeConfig(int zCollun)
     {

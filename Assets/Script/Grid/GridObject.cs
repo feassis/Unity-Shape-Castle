@@ -18,7 +18,7 @@ public class GridObject
         this.gridSystem = gridSystem;
     }
 
-    public void SetTile(Tile desiredTile)
+    public void SetTile(Tile desiredTile, Transform parent)
     {
         if (tile != null)
         {
@@ -26,6 +26,7 @@ public class GridObject
         }
 
         tile = GameObject.Instantiate(desiredTile);
+        tile.transform.parent = parent;
         tile.transform.position = gridSystem.GetWorldPosition(gridPosition);
     }
 

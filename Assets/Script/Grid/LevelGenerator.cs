@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [SerializeField] private Transform levelHolder;
     [SerializeField] private List<TileNode> tiles;
     [SerializeField] private List<BiomesSetup> biomes;
 
@@ -104,7 +105,7 @@ public class LevelGenerator : MonoBehaviour
                     }
 
                     GridObject obj = gridSystem.GetGridObject(gridPos);
-                    obj.SetTile(tiles.Find(t => t.Type == item.Terrain).Tile);
+                    obj.SetTile(tiles.Find(t => t.Type == item.Terrain).Tile, levelHolder);
                     visitedNodes.Add(obj.GetGridPosition());
                 }
             }
@@ -173,7 +174,7 @@ public class LevelGenerator : MonoBehaviour
 
             Terrain desiredTerrain = GetChoosenSeed(spread);
 
-            gridSystem.GetGridObject(visitingNode).SetTile(tiles.Find(t => t.Type == desiredTerrain).Tile);
+            gridSystem.GetGridObject(visitingNode).SetTile(tiles.Find(t => t.Type == desiredTerrain).Tile, levelHolder);
             visitedNodes.Add(visitingNode);
             nodesToVisit.Remove(visitingNode);
 

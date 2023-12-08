@@ -8,7 +8,10 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float speedWhileBuilding = 1;
+    [SerializeField] private float rotationSpeed = 360;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private PlayerBody body;
 
     private PlayerInputActions playerAction;
     private InputAction moveAction;
@@ -43,20 +46,25 @@ public class Player : MonoBehaviour
         playerAction.Enable();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        CameraControler.Instance.GoToFollowPlayerMode(this);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(moveDirection);
-        if(moveDirection == Vector2.zero)
+        rb.velocity = new Vector3(moveDirection.x, 0, moveDirection.y) * speed;
+
+        body.AnimateMovement(moveDirection);
+        if (moveDirection == Vector2.zero)
         {
             return;
         }
-        rb.MovePosition(transform.position + new Vector3( moveDirection.x * speed * Time.deltaTime,  0, moveDirection.y * speed * Time.deltaTime));
+
+
+        Quaternion toRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0, moveDirection.y), Vector3.up);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, Time.deltaTime * rotationSpeed);
+
     }
 }

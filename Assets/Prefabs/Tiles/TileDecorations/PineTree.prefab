@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5538039460120944192}
   - component: {fileID: 6094284532401230}
   - component: {fileID: 2663286155845260965}
-  - component: {fileID: 5463443251459532080}
   - component: {fileID: 603385469372402175}
   m_Layer: 0
   m_Name: PineTree
@@ -86,29 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5463443251459532080
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2961030490281990405}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &603385469372402175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +109,6 @@ GameObject:
   - component: {fileID: 5919820360699218201}
   - component: {fileID: 7526144439215729893}
   - component: {fileID: 7644874385697735204}
-  - component: {fileID: 2780766515986603866}
   m_Layer: 0
   m_Name: Cone
   m_TagString: Untagged
@@ -666,26 +641,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5087696356301978857}
-  m_Mesh: {fileID: 0}
---- !u!64 &2780766515986603866
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5087696356301978857}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}

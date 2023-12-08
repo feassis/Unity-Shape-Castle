@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 6853469946209500677}
   - component: {fileID: 5412386692741852590}
   - component: {fileID: 7176789968467107795}
+  - component: {fileID: 1049857301964561042}
   m_Layer: 0
   m_Name: hex_forest_detail
   m_TagString: Untagged
@@ -117,6 +118,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1049857301964561042
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091440899913595120}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4021805801945829177, guid: 1e4c5f189b0956b49970f47fd051f5d9, type: 3}
 --- !u!1 &7564250637688512173
 GameObject:
   m_ObjectHideFlags: 0

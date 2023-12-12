@@ -61,7 +61,7 @@ public class LevelGrid : MonoBehaviour
         var gridObject = GetGridSystem(gridPosition.floor).GetGridObject(gridPosition);
     }
 
-    private GridSystemHex<GridObject> GetGridSystem(int floor) => gridSystemList[floor];
+    public GridSystemHex<GridObject> GetGridSystem(int floor) => gridSystemList[floor];
 
     public int GetFloor(Vector3 worldPosition) => Mathf.RoundToInt(worldPosition.y / floorHeight);
 

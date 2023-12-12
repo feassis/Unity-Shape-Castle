@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private Transform modfierHolder;
     [SerializeField] private List<TileSpreadSeed> tileSpreadSeeds = new List<TileSpreadSeed>();
     [SerializeField] private List<ModifiersProbabilities> modifiersProbabilities;
+    [SerializeField] private BuildCanvas buildCanvas;
 
     private GameObject modifierObj;
     
@@ -21,6 +22,16 @@ public class Tile : MonoBehaviour
     }
 
     public List<TileSpreadSeed> GetTileSpreads() { return tileSpreadSeeds; }
+
+    public void ShowBuildButton()
+    {
+        buildCanvas.Show();
+    }
+
+    public void HideBuildButton()
+    {
+        buildCanvas.Hide();
+    }
 
     private void Start()
     {
@@ -43,7 +54,6 @@ public class Tile : MonoBehaviour
         var mod = TerrainService.Instance.GetTerrain(terrainModfier);
         Instantiate(mod, modfierHolder);
     }
-
 
     private void SetupModifier()
     {

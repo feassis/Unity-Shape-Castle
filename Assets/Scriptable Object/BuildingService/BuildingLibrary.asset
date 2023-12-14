@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff7bef74fb67e7469b7169ad86a2347, type: 3}
+  m_Name: BuildingLibrary
+  m_EditorClassIdentifier: 
+  entries:
+  - Type: 1
+    Building: {fileID: 1007444433059912305, guid: 39b0747d214d515448f70005e4ca936e,
+      type: 3}
+  - Type: 2
+    Building: {fileID: 4153041089594504973, guid: 11d226a70ee3d3a4c996926742e50410,
+      type: 3}
+  - Type: 3
+    Building: {fileID: 4077256003651243097, guid: 5485bb9b6bdaf3f439e18228667cbcb0,
+      type: 3}
+  - Type: 4
+    Building: {fileID: 2170793787870362405, guid: 3e4a7946e18477043a892a11871f5c2e,
+      type: 3}
+  - Type: 5
+    Building: {fileID: 2484477484834311669, guid: 4397515a9f693374093529dd2cca57af,
+      type: 3}
+  - Type: 6
+    Building: {fileID: 6987107628275991197, guid: cd105f465775ddb44b3763a1eddccc66,
+      type: 3}
+  - Type: 7
+    Building: {fileID: 8992590982016468980, guid: 017935357f7e55b4db648cb8bbc9aa41,
+      type: 3}
+  - Type: 8
+    Building: {fileID: 7325295279441024617, guid: 25483eab014f6bb4a9645b3621a53d81,
+      type: 3}
+  - Type: 10
+    Building: {fileID: 1947604005121443094, guid: 45677444e4bf0bf49b758ed9c10b5fe5,
+      type: 3}
+  - Type: 11
+    Building: {fileID: 5054052040683317652, guid: 67e15ece6a5214d4cb457bf0f60eb572,
+      type: 3}
+  - Type: 12
+    Building: {fileID: 7441379078294839280, guid: 31ccf4606933b5a4e983d3ec66cfc851,
+      type: 3}
+  - Type: 13
+    Building: {fileID: 403270325940489218, guid: 1d3224bcbe8d5d34591560f596372fef,
+      type: 3}
+  - Type: 14
+    Building: {fileID: 5776865564047417710, guid: 4a437b7789e7188479cc6038e04cefaa,
+      type: 3}
+  - Type: 15
+    Building: {fileID: 5216378469222941156, guid: d833f0d67c3920348bc88f9e1b7f05e7,
+      type: 3}
+  - Type: 16
+    Building: {fileID: 878357131112871370, guid: dd500ff5d88df6246b25224915fbe24d,
+      type: 3}
+  - Type: 17
+    Building: {fileID: 5068471219168894381, guid: 9fe87c2fcd23e5e498d2454c49fc3518,
+      type: 3}
+  - Type: 18
+    Building: {fileID: 608072200358798219, guid: f25f64a271732654bad67cd17874dc86,
+      type: 3}
+  - Type: 19
+    Building: {fileID: 2661672796420830062, guid: 1d8d36e792918004d9f6e74e4c4d5316,
+      type: 3}

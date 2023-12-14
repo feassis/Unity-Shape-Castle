@@ -12,13 +12,13 @@ public class Tile : MonoBehaviour
 
     private GameObject modifierObj;
     
-    private TerrainModfier terrainModfier;
+    private TerrainModifier terrainModfier;
 
     [Serializable]
     private struct ModifiersProbabilities
     {
         public float weight;
-        public TerrainModfier modifier;
+        public TerrainModifier modifier;
     }
 
     public List<TileSpreadSeed> GetTileSpreads() { return tileSpreadSeeds; }
@@ -46,7 +46,7 @@ public class Tile : MonoBehaviour
             Destroy(modifierObj);
         }
 
-        if (terrainModfier == TerrainModfier.None)
+        if (terrainModfier == TerrainModifier.None)
         {
             return;
         }

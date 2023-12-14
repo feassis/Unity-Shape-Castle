@@ -11,11 +11,11 @@ public class TerrainModifierConfig : ScriptableObject
     [Serializable]
     private struct TerrainModifierLibraryEntry
     {
-        public TerrainModfier TerrainMod;
+        public TerrainModifier TerrainMod;
         public GameObject ModifierObj;
     }
 
-    public GameObject GetTarreingModfierObj(TerrainModfier terrainMod)
+    public GameObject GetTarreingModfierObj(TerrainModifier terrainMod)
     {
         return terraingModEntry.Find(t => t.TerrainMod == terrainMod).ModifierObj;
     }

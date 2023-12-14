@@ -11,13 +11,17 @@ public enum BuildingType
     Quarry = 4,
     Towers = 5,
     Barracks = 6,
-    ArcheryRange = 7 
+    ArcheryRange = 7 ,
     IceFish = 8,
-    AnimalFarm = 9,
     Fort = 10,
-    WereHouse = 11,
+    WareHouse = 11,
     WheatFarm = 12,
     BerryGather = 13,
+    SawMill = 14,
     SheepFarm = 15,
     CowFarm = 16,
+    SawMillPlains = 17,
+    RichIronMine = 18,
+    RichGoldMine = 19,
+    StoneGather = 20
 }

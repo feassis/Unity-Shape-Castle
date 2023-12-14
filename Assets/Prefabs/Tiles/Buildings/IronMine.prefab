@@ -49,6 +49,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6250822513711433527}
+  - component: {fileID: 4153041089594504973}
   m_Layer: 0
   m_Name: IronMine
   m_TagString: Untagged
@@ -74,6 +75,18 @@ Transform:
   - {fileID: 7560098567262583152}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4153041089594504973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5226856393478105871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f78ac21887775940a20a5d311dd8382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7301411319599354362
 GameObject:
   m_ObjectHideFlags: 0

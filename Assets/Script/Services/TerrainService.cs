@@ -28,7 +28,7 @@ public class TerrainService : MonoBehaviour
         return biomeNodeOptions.Find(b => b.Terrain == terrain).GetBiome(zCollun);
     }
 
-    public GameObject GetTerrain(TerrainModfier terrain)
+    public GameObject GetTerrain(TerrainModifier terrain)
     {
         return terrainModifierConfig.GetTarreingModfierObj(terrain);
     }

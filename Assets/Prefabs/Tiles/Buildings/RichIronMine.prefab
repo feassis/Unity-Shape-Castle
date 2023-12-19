@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f78ac21887775940a20a5d311dd8382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildButtonIcon: {fileID: 21300000, guid: e60da343f59d91e469d089b85d0498db, type: 3}
 --- !u!1 &3238406977499166458
 GameObject:
   m_ObjectHideFlags: 0

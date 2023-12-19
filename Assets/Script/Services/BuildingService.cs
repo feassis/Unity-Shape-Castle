@@ -8,6 +8,10 @@ public class BuildingService : MonoBehaviour
 
     [SerializeField] private BuildingRuleBookConfig buildingRules;
     [SerializeField] private BuildingLibraryConfig buildingLibraryConfig;
+    [SerializeField] private BuildMenu buildMenuPrefab;
+    [SerializeField] private Transform canvas;
+
+    private BuildMenu buildMenu;
 
     public Building GetBuilding(BuildingType buildingType)
     {
@@ -19,8 +23,29 @@ public class BuildingService : MonoBehaviour
         return buildingRules.GetBuildingOptions(terrain, modifier);
     }
 
+    public void OpenBuildingMenu(Tile tile)
+    {
+        if(buildMenu != null)
+        {
+            CloseBuildingMenu();
+        }
+
+        buildMenu = Instantiate(buildMenuPrefab, canvas);
+    }
+
+    public void CloseBuildingMenu()
+    {
+        Destroy(buildMenu.gameObject);
+        buildMenu = null;
+    }
+
     private void Awake()
     {
+        if (buildMenu != null)
+        {
+            CloseBuildingMenu();
+        }
+
         if (Instance != null)
         {
             Destroy(gameObject);

@@ -10,7 +10,7 @@ public class BuildCanvas : MonoBehaviour
     [SerializeField] private GameObject buildCanvas;
 
 
-    public void SubsCribeToButtonPress(Action action)
+    public void SubscribeToButtonPress(Action action)
     {
         buildButton.onClick.AddListener(() => action.Invoke());
     }

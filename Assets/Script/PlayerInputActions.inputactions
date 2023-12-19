@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UICancel",
+                    "type": "Button",
+                    "id": "380ac60f-b7e2-4631-b41b-d09d3647a1d2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -234,6 +243,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Build",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78491084-9bbf-449a-a37f-e9234c237944",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UICancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

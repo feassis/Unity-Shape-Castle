@@ -67,3 +67,6 @@ MonoBehaviour:
   - Type: 19
     Building: {fileID: 2661672796420830062, guid: 1d8d36e792918004d9f6e74e4c4d5316,
       type: 3}
+  - Type: 20
+    Building: {fileID: 9184117676364248676, guid: f9d3c25744c5f5840a44ea9ea9bd0dac,
+      type: 3}

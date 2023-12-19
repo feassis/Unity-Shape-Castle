@@ -37,6 +37,12 @@ public class Tile : MonoBehaviour
     {
         SetupModifier();
         InstantiateGameObject();
+        buildCanvas.SubscribeToButtonPress(OpenBuildMenu);
+    }
+
+    private void OpenBuildMenu()
+    {
+        BuildingService.Instance.OpenBuildingMenu(this);
     }
 
     private void InstantiateGameObject()

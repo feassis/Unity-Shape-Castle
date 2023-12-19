@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f78ac21887775940a20a5d311dd8382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildButtonIcon: {fileID: 21300000, guid: 07ff0a9ac8315e84083eaf45107b4d05, type: 3}
 --- !u!1001 &1392607311643153800
 PrefabInstance:
   m_ObjectHideFlags: 0

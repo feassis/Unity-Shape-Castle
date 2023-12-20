@@ -14,7 +14,11 @@ public class BuildingRuleBookConfig : ScriptableObject
     public List<BuildingType> GetBuildingOptions(Terrain terrain, TerrainModifier modfier)
     {
         List<BuildingType> buildingList = buildingRuleTerrains.Find(b => b.Type == terrain).Buildings;
-        buildingList.AddRange(builingRuleModifiers.Find(b => b.Type == modfier).Buildings);
+        if(modfier != TerrainModifier.None)
+        {
+            buildingList.AddRange(builingRuleModifiers.Find(b => b.Type == modfier).Buildings);
+        }
+        
         buildingList.AddRange(CommomBuildings);
 
         return buildingList;

@@ -185,3 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1beff69f2a16bef4abce08ba7ed1882d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPrefab: {fileID: 7018508215327970060, guid: 467214cd48f168d448138a59e183145a,
+    type: 3}
+  menuHolder: {fileID: 5573663499973875188}

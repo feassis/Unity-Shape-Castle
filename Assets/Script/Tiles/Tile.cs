@@ -23,6 +23,9 @@ public class Tile : MonoBehaviour
 
     public List<TileSpreadSeed> GetTileSpreads() { return tileSpreadSeeds; }
 
+    public Terrain GetTerrain() => type;
+    public TerrainModifier GetTerrainModifier() => terrainModfier;
+
     public void ShowBuildButton()
     {
         buildCanvas.Show();

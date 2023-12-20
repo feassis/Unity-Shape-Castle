@@ -12,6 +12,7 @@ public class BuildingService : MonoBehaviour
     [SerializeField] private Transform canvas;
 
     private BuildMenu buildMenu;
+    private Tile activeTile;
 
     public Building GetBuilding(BuildingType buildingType)
     {
@@ -29,14 +30,21 @@ public class BuildingService : MonoBehaviour
         {
             CloseBuildingMenu();
         }
-
+        activeTile = tile;
         buildMenu = Instantiate(buildMenuPrefab, canvas);
+        buildMenu.Setup(tile);
     }
 
     public void CloseBuildingMenu()
     {
         Destroy(buildMenu.gameObject);
         buildMenu = null;
+        activeTile = null;
+    }
+
+    public void TryBuildOnTile(BuildingType buildingType)
+    {
+
     }
 
     private void Awake()

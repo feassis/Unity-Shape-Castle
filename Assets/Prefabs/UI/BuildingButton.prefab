@@ -130,6 +130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1888525778227810855}
+  - component: {fileID: 7018508215327970060}
   m_Layer: 0
   m_Name: BuildingButton
   m_TagString: Untagged
@@ -157,6 +158,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7018508215327970060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8011116748273884675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6926b087aedd14084618b8c4bb149f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1777120124435078451}
+  buildButton: {fileID: 2117819767020381317}
 --- !u!1 &8298019844951657709
 GameObject:
   m_ObjectHideFlags: 0

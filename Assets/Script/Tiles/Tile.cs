@@ -9,6 +9,10 @@ public class Tile : MonoBehaviour
     [SerializeField] private List<TileSpreadSeed> tileSpreadSeeds = new List<TileSpreadSeed>();
     [SerializeField] private List<ModifiersProbabilities> modifiersProbabilities;
     [SerializeField] private BuildCanvas buildCanvas;
+    [SerializeField] private Transform buildHolder;
+    [SerializeField] private List<GameObject> hideOnBuild = new List<GameObject>();
+
+    private Building currentBuilding;
 
     private GameObject modifierObj;
     
@@ -28,12 +32,32 @@ public class Tile : MonoBehaviour
 
     public void ShowBuildButton()
     {
+        if(type == Terrain.Spawn)
+        {
+            return;
+        }
+
         buildCanvas.Show();
     }
 
     public void HideBuildButton()
     {
         buildCanvas.Hide();
+    }
+
+    public void BuildStructure(Building building)
+    {
+        if(currentBuilding != null)
+        {
+            Destroy(currentBuilding.gameObject);
+        }
+
+        foreach (var obj in hideOnBuild)
+        {
+            obj.SetActive(false);
+        }
+
+        currentBuilding = Instantiate(building, buildHolder);
     }
 
     private void Start()

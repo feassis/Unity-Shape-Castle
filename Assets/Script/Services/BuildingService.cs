@@ -43,8 +43,10 @@ public class BuildingService : MonoBehaviour
     }
 
     public void TryBuildOnTile(BuildingType buildingType)
-    {
-
+    {        
+        var desiredBuild = GetBuilding(buildingType);
+        activeTile.BuildStructure(desiredBuild);
+        CloseBuildingMenu();
     }
 
     private void Awake()

@@ -209,6 +209,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 6a49b3dcd32609242b47c432535902da, type: 3}
+--- !u!1 &4569316795269665100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5746707821639109046}
+  m_Layer: 0
+  m_Name: Building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5746707821639109046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4569316795269665100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5024368704903466437}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8344956409693274500
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +273,7 @@ Transform:
   - {fileID: 7508426386053219523}
   - {fileID: 3626646584072306169}
   - {fileID: 8499057835455020045}
+  - {fileID: 5746707821639109046}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1041566229906767260
@@ -277,6 +309,17 @@ MonoBehaviour:
   - weight: 10
     modifier: 10
   buildCanvas: {fileID: 7365409702767310188}
+  buildHolder: {fileID: 5746707821639109046}
+  hideOnBuild:
+  - {fileID: 3875675767804130494}
+  - {fileID: 3313418711704240385}
+  - {fileID: 4964799646566953251}
+  - {fileID: 5571753436454847716}
+  - {fileID: 8985109070084712184}
+  - {fileID: 2451815455035260246}
+  - {fileID: 1989913445046274093}
+  - {fileID: 4673874151862695867}
+  - {fileID: 3652485648044904008}
 --- !u!1001 &1683500108555810172
 PrefabInstance:
   m_ObjectHideFlags: 0

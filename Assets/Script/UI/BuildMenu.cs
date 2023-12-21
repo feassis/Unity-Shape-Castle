@@ -46,6 +46,9 @@ public class BuildMenu : MonoBehaviour
             button.Setup(option, BuildingService.Instance.GetBuilding(option).GetBuildingIcon());
             buildButtons.Add(button);
         }
+        buildOptions.Clear();
+
+
     }
 
     private void OnDisable()

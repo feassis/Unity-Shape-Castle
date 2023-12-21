@@ -461,6 +461,8 @@ MonoBehaviour:
   - weight: 2
     modifier: 9
   buildCanvas: {fileID: 339934266938848376}
+  buildHolder: {fileID: 4213882364500212941}
+  hideOnBuild: []
 --- !u!1 &9101315920779950454
 GameObject:
   m_ObjectHideFlags: 0

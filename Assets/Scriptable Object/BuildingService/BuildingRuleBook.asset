@@ -22,12 +22,12 @@ MonoBehaviour:
     Buildings: 
   - Type: 4
     Buildings: 
-  - Type: 5
-    Buildings: 0e000000
   - Type: 6
     Buildings: 
   - Type: 7
     Buildings: 
+  - Type: 5
+    Buildings: 0e000000
   builingRuleModifiers:
   - Type: 1
     Buildings: 0c000000

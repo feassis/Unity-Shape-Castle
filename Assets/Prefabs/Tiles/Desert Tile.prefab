@@ -567,6 +567,7 @@ Transform:
   m_Children:
   - {fileID: 4890762499020943337}
   - {fileID: 3301158110836399833}
+  - {fileID: 1457815827129594361}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6219951281425881852
@@ -600,6 +601,21 @@ MonoBehaviour:
   - weight: 1
     modifier: 0
   buildCanvas: {fileID: 4473649773092493240}
+  buildHolder: {fileID: 1457815827129594361}
+  hideOnBuild:
+  - {fileID: 7887229694083461650}
+  - {fileID: 1582333989552624436}
+  - {fileID: 2154084369155653605}
+  - {fileID: 909490494288189444}
+  - {fileID: 3707510039474620077}
+  - {fileID: 2645866545984285595}
+  - {fileID: 5031460702287199017}
+  - {fileID: 5091672537404343627}
+  - {fileID: 4105293229513402823}
+  - {fileID: 5791188182566709830}
+  - {fileID: 8431953996100446995}
+  - {fileID: 2796809943081152199}
+  - {fileID: 7341494891646010604}
 --- !u!1 &596464377744514535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,6 +3123,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showPercentage: 0.205
+--- !u!1 &5631547023016039870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1457815827129594361}
+  m_Layer: 0
+  m_Name: Building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1457815827129594361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5631547023016039870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 279518857543626711}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5791188182566709830
 GameObject:
   m_ObjectHideFlags: 0

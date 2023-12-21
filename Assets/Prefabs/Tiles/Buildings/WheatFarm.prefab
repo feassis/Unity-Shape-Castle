@@ -222,6 +222,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheat Fields (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -389,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheat Fields (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1028,6 +1038,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheat Fields (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1101,6 +1116,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheat Fields (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1458,6 +1478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheat Fields
       objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1532,6 +1557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheat Fields (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1605,6 +1635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheat Fields (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1773,6 +1808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheat Fields (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093969862277824009, guid: 7f7571086dee88946a0031599e9ab0a6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

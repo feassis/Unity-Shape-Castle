@@ -3,11 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
 
 public class BuildMenu : MonoBehaviour
 {
     [SerializeField] private BuildButton buttonPrefab;
     [SerializeField] private Transform menuHolder;
+    [SerializeField] private GameObject buildingDescriptionMenu;
+    [SerializeField] private Button buildStructureButton;
+    [SerializeField] private Button CloseDescriptionButton;
+    [SerializeField] private TextMeshProUGUI buildNameText;
+    [SerializeField] private TextMeshProUGUI buildDescriptionText;
+    [SerializeField] private TextMeshProUGUI generationTimeText;
+    [SerializeField] private List<ResourceText> costText;
+    [SerializeField] private List<ResourceText> generationText;
+
+    [Serializable]
+    private struct ResourceText
+    {
+        public ResourceType type;
+        public TextMeshProUGUI amountText;
+    } 
+
+
+
     private PlayerInputActions playerAction;
     private InputAction uiCancelAction;
 
@@ -63,17 +83,5 @@ public class BuildMenu : MonoBehaviour
             return;
         }
         playerAction.Enable();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

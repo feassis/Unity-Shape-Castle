@@ -11,10 +11,13 @@ public class BuildButton : MonoBehaviour
 
     private BuildingType buildingType;
 
-    public void Setup(BuildingType buildingType, Sprite sprite)
+    public Action<BuildingType> buildingTypeAction;
+
+    public void Setup(BuildingType buildingType, Sprite sprite, Action<BuildingType> onClick)
     {
         this.buildingType = buildingType;
         icon.sprite = sprite;
+        buildingTypeAction = onClick;
     }
 
     private void Awake()
@@ -24,6 +27,6 @@ public class BuildButton : MonoBehaviour
 
     private void OnBuildButtonClicked()
     {
-        BuildingService.Instance.TryBuildOnTile(buildingType);
+        buildingTypeAction?.Invoke(buildingType);
     }
 }

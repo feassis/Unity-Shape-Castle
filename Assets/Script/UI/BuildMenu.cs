@@ -12,7 +12,8 @@ public class BuildMenu : MonoBehaviour
     [SerializeField] private Transform menuHolder;
     [SerializeField] private GameObject buildingDescriptionMenu;
     [SerializeField] private Button buildStructureButton;
-    [SerializeField] private Button CloseDescriptionButton;
+    [SerializeField] private Button closeDescriptionButton;
+    [SerializeField] private Image descriptionIcon;
     [SerializeField] private TextMeshProUGUI buildNameText;
     [SerializeField] private TextMeshProUGUI buildDescriptionText;
     [SerializeField] private TextMeshProUGUI generationTimeText;
@@ -26,7 +27,7 @@ public class BuildMenu : MonoBehaviour
         public TextMeshProUGUI amountText;
     } 
 
-
+    private BuildingType currentBuildingType;
 
     private PlayerInputActions playerAction;
     private InputAction uiCancelAction;
@@ -40,6 +41,43 @@ public class BuildMenu : MonoBehaviour
         uiCancelAction = playerAction.FindAction("UICancel");
 
         uiCancelAction.performed += OnUICancel;
+
+        closeDescriptionButton.onClick.AddListener(OnCloseDescriptionClicked);
+        buildStructureButton.onClick.AddListener(OnBuildStructureClicked);
+    }
+
+    private void SetupBuildingDescription(BuildingType type)
+    {
+        Building building = BuildingService.Instance.GetBuilding(type);
+
+        buildNameText.text = building.GetBuildingName();
+        buildDescriptionText.text = building.GetBuildDescription();
+        generationTimeText.text = building.GetGenerationTime().ToString();
+        descriptionIcon.sprite = building.GetBuildingIcon();
+
+        foreach (var cost in costText)
+        {
+            cost.amountText.text = building.GetReourceCostAmount(cost.type).ToString();
+        }
+
+
+        foreach (var generation in generationText)
+        {
+            generation.amountText.text = building.GetReourceGenerationAmount(generation.type).ToString();
+        }
+    }
+
+    private void OnBuildStructureClicked()
+    {
+        BuildingService.Instance.TryBuildOnTile(currentBuildingType);
+        OnCloseDescriptionClicked();
+        BuildingService.Instance.CloseBuildingMenu();
+    }
+
+    private void OnCloseDescriptionClicked()
+    {
+        currentBuildingType = BuildingType.None;
+        buildingDescriptionMenu.SetActive(false);
     }
 
     private void OnUICancel(InputAction.CallbackContext context)
@@ -63,12 +101,21 @@ public class BuildMenu : MonoBehaviour
         foreach (var option in buildOptions)
         {
             BuildButton button = Instantiate(buttonPrefab, menuHolder);
-            button.Setup(option, BuildingService.Instance.GetBuilding(option).GetBuildingIcon());
+            button.Setup(option, BuildingService.Instance.GetBuilding(option).GetBuildingIcon(), OpenDescriptionMenu);
             buildButtons.Add(button);
         }
         buildOptions.Clear();
 
 
+    }
+
+
+    private void OpenDescriptionMenu(BuildingType type)
+    {
+        currentBuildingType = type;
+        buildingDescriptionMenu.SetActive(true);
+
+        SetupBuildingDescription(type);
     }
 
     private void OnDisable()

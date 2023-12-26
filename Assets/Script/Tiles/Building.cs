@@ -40,4 +40,6 @@ public class Building : MonoBehaviour
     public string GetBuildDescription() => buildDescription;
 
     public Sprite GetBuildingIcon() { return buildButtonIcon; }
+
+    public float GetGenerationTime() { return generationTime; }
 }

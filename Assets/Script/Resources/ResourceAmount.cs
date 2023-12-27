@@ -3,6 +3,6 @@
 [Serializable]
 public class ResourceAmount
 {
-    public ResourceType resourseType;
+    public ResourceType resourceType;
     public float amount;
 }

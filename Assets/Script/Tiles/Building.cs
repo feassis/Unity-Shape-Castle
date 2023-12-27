@@ -13,7 +13,7 @@ public class Building : MonoBehaviour
     
     public float GetReourceCostAmount(ResourceType type)
     {
-        var cost = resourcesCost.Find(r => r.resourseType == type);
+        var cost = resourcesCost.Find(r => r.resourceType == type);
 
         if(cost == null)
         {
@@ -25,7 +25,7 @@ public class Building : MonoBehaviour
 
     public float GetReourceGenerationAmount(ResourceType type)
     {
-        var generation = resourcesGeneration.Find(r => r.resourseType == type);
+        var generation = resourcesGeneration.Find(r => r.resourceType == type);
 
         if (generation == null)
         {

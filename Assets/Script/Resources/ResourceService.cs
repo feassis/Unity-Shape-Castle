@@ -13,8 +13,8 @@ public class ResourceService : MonoBehaviour
 
     private GameObject resourceUI;
 
-    public event Action<float> OnResourceAdded;
-    public event Action<float> OnResourceRemoved;
+    public event Action<ResourceType, float> OnResourceAdded;
+    public event Action<ResourceType, float> OnResourceRemoved;
 
     public float GetResourceAmount(ResourceType type) => resourceAmounts.Find(r => r.resourceType == type).amount;
 
@@ -22,14 +22,14 @@ public class ResourceService : MonoBehaviour
     {
         var resource = resourceAmounts.Find(r => r.resourceType == type);
         resource.amount += amount;
-        OnResourceAdded?.Invoke(amount);
+        OnResourceAdded?.Invoke(type, amount);
     }
 
     public void SubtractResource(ResourceType type, float amount)
     {
         var resource = resourceAmounts.Find(r => r.resourceType == type);
         resource.amount -= amount;
-        OnResourceRemoved?.Invoke(amount);
+        OnResourceRemoved?.Invoke(type, amount);
     }
 
     private void Awake()

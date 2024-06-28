@@ -12,6 +12,7 @@ public class LevelGrid : MonoBehaviour
     [SerializeField] private float cellSize;
     [SerializeField] private float floorHeight = 3f;
     [SerializeField] private LevelGenerator levelGenerator;
+    [SerializeField] private bool slowGeneration;
     private List<GridSystemHex<GridObject>> gridSystemList;
 
 
@@ -44,7 +45,15 @@ public class LevelGrid : MonoBehaviour
 
     private void Start()
     {
-        levelGenerator.GenerateLevel(gridSystemList[0]);
+        if (slowGeneration)
+        {
+            StartCoroutine(levelGenerator.SlowGenerateLevel(gridSystemList[0]));
+        }
+        else
+        {
+            levelGenerator.GenerateLevel(gridSystemList[0]);
+        }
+        
         //Pathfinding.Instance.Setup(width, height, cellSize, floorAmount);
     }
 

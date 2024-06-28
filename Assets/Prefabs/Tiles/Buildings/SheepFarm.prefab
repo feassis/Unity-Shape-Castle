@@ -162,10 +162,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: b0cbeb0b507237e42a7ea153432f0d0a, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
-  resourcesGeneration: []
+  buildName: Sheep Farm
+  buildDescription: Generates food and hide
+  resourcesCost:
+  - resourceType: 3
+    amount: 8
+  - resourceType: 5
+    amount: 2
+  resourcesGeneration:
+  - resourceType: 5
+    amount: 3
+  - resourceType: 4
+    amount: 1
   generationTime: 0
   generationResourceCanvas: {fileID: 5666850311571222483}
   fillBar: {fileID: 2327171260840367131}

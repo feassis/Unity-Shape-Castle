@@ -98,11 +98,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: f11cd7b0b22272f43b8e13fc7b033da5, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
-  resourcesGeneration: []
-  generationTime: 0
+  buildName: Rich Gold Mine
+  buildDescription: Generates Gold Mine
+  resourcesCost:
+  - resourceType: 0
+    amount: 20
+  - resourceType: 3
+    amount: 10
+  resourcesGeneration:
+  - resourceType: 2
+    amount: 3
+  generationTime: 60
   generationResourceCanvas: {fileID: 2417902351908836043}
   fillBar: {fileID: 7781603425422386286}
 --- !u!1 &6229040410928584370

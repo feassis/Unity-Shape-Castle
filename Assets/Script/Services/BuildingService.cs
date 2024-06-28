@@ -42,11 +42,26 @@ public class BuildingService : MonoBehaviour
         activeTile = null;
     }
 
-    public void TryBuildOnTile(BuildingType buildingType)
-    {        
-        var desiredBuild = GetBuilding(buildingType);
+    public bool TryBuildOnTile(BuildingType buildingType)
+    {
+        Building desiredBuild = GetBuilding(buildingType);
+
+
+        var cost = desiredBuild.GetAllCost();
+
+        var resourceService = ResourceService.Instance;
+
+        foreach (var resource in cost)
+        {
+            if(resource.amount > resourceService.GetResourceAmount(resource.resourceType))
+            {
+                return false;
+            }
+        }
+
         activeTile.BuildStructure(desiredBuild);
         CloseBuildingMenu();
+        return true;
     }
 
     private void Awake()

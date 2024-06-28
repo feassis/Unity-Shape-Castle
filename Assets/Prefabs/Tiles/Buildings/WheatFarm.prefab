@@ -66,11 +66,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: 581de29c502b5024ea89485e77e9a9d1, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
-  resourcesGeneration: []
-  generationTime: 0
+  buildName: Wheat Farm
+  buildDescription: Generate food
+  resourcesCost:
+  - resourceType: 3
+    amount: 15
+  - resourceType: 4
+    amount: 2
+  resourcesGeneration:
+  - resourceType: 5
+    amount: 10
+  generationTime: 30
   generationResourceCanvas: {fileID: 8896740037919979842}
   fillBar: {fileID: 1556246930283545226}
 --- !u!1001 &773352397019798282

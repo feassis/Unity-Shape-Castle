@@ -92,11 +92,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: 6685abe67dabbe64596510d16648717b, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
-  resourcesGeneration: []
-  generationTime: 0
+  buildName: Cow Farm
+  buildDescription: Generates food and hide
+  resourcesCost:
+  - resourceType: 3
+    amount: 10
+  - resourceType: 5
+    amount: 2
+  resourcesGeneration:
+  - resourceType: 5
+    amount: 3
+  - resourceType: 4
+    amount: 2
+  generationTime: 30
   generationResourceCanvas: {fileID: 6083661152863503271}
   fillBar: {fileID: 4216202882814654575}
 --- !u!1 &802082870722863986

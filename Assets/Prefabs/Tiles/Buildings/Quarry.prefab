@@ -614,11 +614,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: 981b37a2f4ace52449fae88a0c911db7, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
-  resourcesGeneration: []
-  generationTime: 0
+  buildName: Quarry
+  buildDescription: Generates stone
+  resourcesCost:
+  - resourceType: 0
+    amount: 15
+  - resourceType: 3
+    amount: 5
+  resourcesGeneration:
+  - resourceType: 0
+    amount: 5
+  generationTime: 30
   generationResourceCanvas: {fileID: 3513859465228775431}
   fillBar: {fileID: 6786022128295218127}
 --- !u!1 &4960265239513135022

@@ -46,7 +46,7 @@ public class CameraControler : MonoBehaviour
         cameraFocalPoint.transform.position = player.position;
     }
 
-    public void GoToFollowPlayerMode(Player player)
+    public void GoToFollowPlayerMode(GameObject player)
     {
         this.player = player.transform;
         cameraState = CameraState.Follow;

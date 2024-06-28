@@ -52,11 +52,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: e60da343f59d91e469d089b85d0498db, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
-  resourcesGeneration: []
-  generationTime: 0
+  buildName: Rich Iron Mine
+  buildDescription: Generates Iron
+  resourcesCost:
+  - resourceType: 0
+    amount: 20
+  - resourceType: 3
+    amount: 10
+  resourcesGeneration:
+  - resourceType: 1
+    amount: 4
+  generationTime: 30
   generationResourceCanvas: {fileID: 7601189511401829643}
   fillBar: {fileID: 545971490234240707}
 --- !u!1 &3238406977499166458

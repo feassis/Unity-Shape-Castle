@@ -13,6 +13,7 @@ public class ResourceUI : MonoBehaviour
     {
         public ResourceType type;
         public TextMeshProUGUI amountText;
+        public TextMeshProUGUI maxAmountText;
     }
 
     private void Start()
@@ -23,6 +24,7 @@ public class ResourceUI : MonoBehaviour
         foreach (var resource in resourceTexts)
         {
             resource.amountText.text = ResourceService.Instance.GetResourceAmount(resource.type).ToString();
+            resource.maxAmountText.text = ResourceService.Instance.GetResourceMaxAmount(resource.type).ToString();
         }
     }
 

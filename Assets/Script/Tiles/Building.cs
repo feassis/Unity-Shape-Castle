@@ -30,6 +30,8 @@ public class Building : MonoBehaviour
         return cost.amount;
     }
 
+    public List<ResourceAmount> GetAllCost() => resourcesCost;
+
     public float GetReourceGenerationAmount(ResourceType type)
     {
         var generation = resourcesGeneration.Find(r => r.resourceType == type);

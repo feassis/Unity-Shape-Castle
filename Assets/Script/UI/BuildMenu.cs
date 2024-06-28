@@ -57,7 +57,17 @@ public class BuildMenu : MonoBehaviour
 
         foreach (var cost in costText)
         {
-            cost.amountText.text = building.GetReourceCostAmount(cost.type).ToString();
+            var costAmount = building.GetReourceCostAmount(cost.type);
+            cost.amountText.text = costAmount.ToString();
+
+            if(costAmount > ResourceService.Instance.GetResourceAmount(cost.type))
+            {
+                cost.amountText.color = Color.red;
+            }
+            else
+            {
+                cost.amountText.color = Color.green;
+            }
         }
 
 
@@ -69,9 +79,11 @@ public class BuildMenu : MonoBehaviour
 
     private void OnBuildStructureClicked()
     {
-        BuildingService.Instance.TryBuildOnTile(currentBuildingType);
-        OnCloseDescriptionClicked();
-        BuildingService.Instance.CloseBuildingMenu();
+        if (BuildingService.Instance.TryBuildOnTile(currentBuildingType))
+        {
+            OnCloseDescriptionClicked();
+            BuildingService.Instance.CloseBuildingMenu();
+        }
     }
 
     private void OnCloseDescriptionClicked()

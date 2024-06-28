@@ -469,16 +469,22 @@ MonoBehaviour:
   resourceAmounts:
   - resourceType: 0
     amount: 10
+    maxAmount: 25
   - resourceType: 1
     amount: 5
+    maxAmount: 25
   - resourceType: 2
     amount: 0
+    maxAmount: 25
   - resourceType: 3
     amount: 10
+    maxAmount: 25
   - resourceType: 4
     amount: 10
+    maxAmount: 25
   - resourceType: 5
     amount: 10
+    maxAmount: 25
   resourceUIPrefab: {fileID: 5436776985068808078, guid: 2f4ddc1cd056cfa48b72fcbe21f4c389,
     type: 3}
   canvas: {fileID: 935124133}

@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        CameraControler.Instance.GoToFollowPlayerMode(this);
+        CameraControler.Instance.GoToFollowPlayerMode(gameObject);
     }
 
     // Update is called once per frame

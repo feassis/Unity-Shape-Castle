@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: 06ebfacc60fd08f409ca0e6132884b0c, type: 3}
-  buildName: 
-  buildDescription: 
+  buildName: Archery Range
+  buildDescription: Can train archers
   resourcesCost:
   - resourceType: 1
     amount: 2

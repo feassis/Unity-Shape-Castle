@@ -51,9 +51,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildButtonIcon: {fileID: 21300000, guid: 07ff0a9ac8315e84083eaf45107b4d05, type: 3}
-  buildName: 
-  buildDescription: 
-  resourcesCost: []
+  buildName: Tower Defense
+  buildDescription: A tower thar attack enemies on range
+  resourcesCost:
+  - resourceType: 0
+    amount: 20
+  - resourceType: 1
+    amount: 3
+  - resourceType: 3
+    amount: 5
+  - resourceType: 4
+    amount: 3
   resourcesGeneration: []
   generationTime: 0
   generationResourceCanvas: {fileID: 192244470776838316}
